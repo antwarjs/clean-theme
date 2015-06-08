@@ -1,0 +1,45 @@
+.post {
+	align-self: center;
+	width: $max-width;
+	max-width: 100vw;
+	padding: 0 $base-spacing-unit;
+	margin-bottom: $base-spacing-unit * 3;
+	@include media-query('palm') {
+		padding: 0 $half-spacing-unit;
+	}
+}
+.post__content {
+	img {
+		width: 100%;
+	}
+
+	> * {
+		@include media-query('palm') {
+			@include font-size(16px);
+		}
+	}
+}
+.header-image {
+	width: 100%;
+	margin-top: $base-spacing-unit * 3;
+}
+.post__author,
+.post__moment {
+	margin-bottom: $base-spacing-unit;
+}
+.post__author {
+	@extend time;
+}
+.post__heading {
+	position: relative;
+	margin-bottom: $base-spacing-unit * 5;
+}
+.post__heading:after {
+	content: ' ';
+	position: absolute;
+	margin-top: $base-spacing-unit * 5;
+	right: calc(50% - #{$base-spacing-unit * 3});
+	width: $base-spacing-unit * 6;
+	height: 1px;
+	background-color: #000;
+}
