@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1, h2, h3 {
 	text-rendering: optimizeLegibility;
-	font-style: italic;
+	// font-style: italic;
 }
 h1 {
 	@include font-size($h1-size);
@@ -39,21 +39,36 @@ h1 {
 	// text-transform: uppercase;
 	// letter-spacing: 1px;
 	// margin-top: $base-spacing-unit;
+	@include media-query('palm') {
+		@include font-size($h2-size);
+	}
 }
 h2 {
 	@include font-size($h2-size);
 	font-weight: $fat;
+	@include media-query('palm') {
+		@include font-size($h3-size);
+	}
 }
 h3 {
 	@include font-size($h3-size);
+	@include media-query('palm') {
+		@include font-size($h4-size);
+	}
 }
 h4 {
 	@include font-size($h4-size);
+	@include media-query('palm') {
+		@include font-size($h5-size);
+	}
 }
 h5 {
 	@include font-size($h5-size);
 	text-transform: uppercase;
 	margin-bottom: 0;
+	@include media-query('palm') {
+		@include font-size($h6-size);
+	}
 }
 p {
 	margin-bottom: $base-spacing-unit;
@@ -144,7 +159,7 @@ time {
 	font-family: $small-font;
 	color: $quiet-font-color;
 	font-weight: $bold;
-	@include font-size($deci-size);
+	@include font-size($milli-size);
 }
 
 @mixin font-size-micro () {
@@ -165,4 +180,11 @@ time {
 @mixin font-size-deci () {
 	@include font-size($deci-size);
 	// letter-spacing: 1px;
+}
+
+
+p, code, blockquote, pre {
+	@include media-query('palm') {
+		@include font-size(18px);
+	}
 }

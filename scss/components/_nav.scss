@@ -63,7 +63,9 @@ $line-height: 3px;
 	top: $half-spacing-unit;
 	right: $half-spacing-unit;
 	z-index: 100;
-	background-color: $sidebar-color;
+	@include media-query($max-width) {
+		background-color: $sidebar-color;
+	}
 	&:before {
 		top: $base-spacing-unit - $line-height * 2;
 	}

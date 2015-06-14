@@ -19,7 +19,7 @@ $background-alt-color: 							#eee!default;
 
 // Font and spacing
 $base-font-size:										20px!default;
-$base-line-height:									27px!default;
+$base-line-height:									30px!default;
 $base-spacing-unit:									$base-line-height!default;
 $half-spacing-unit:									$base-spacing-unit / 2!default;
 $line-height-ratio:									$base-line-height / $base-font-size!default;
@@ -55,14 +55,15 @@ $light-tint:												97%!default;
 
 // UI element colors
 
-$action-color:											$red!default;
+$action-color:											lighten($dark, 10%)!default;
 $action-color-light:								lighten($action-color, 10%)!default;
 $action-color-dark:									darken($action-color, 10%)!default;
 
 $sidebar-color:											darken($light, 100 - $tint);
 $sidebar-font-color:								$dark;
 
-$link-color: darken($action-color, 20%);
+$link-color: $action-color;
+$link-color-active: lighten($action-color, 20%);
 
 // Borders
 $border-color:											mix($background-color, $font-color, 85%)!default;

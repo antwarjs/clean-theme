@@ -24,14 +24,14 @@ module.exports = React.createClass
 			ul { className: 'post-list'},
 				_.map @getSectionItems(), (item) =>
 					# console.log item
-					li key: item.url,
+					li {className: 'post-list__item', key: item.url},
 						h3 {className: 'post-list__heading'},
 							SectionLink
 								item: item
 							, item.title
 							if item.isDraft then span className: 'draft-text', ' Draft'
+						p {className: 'post-list__preview'},
+							item.preview
 						if item.date
 							MomentDisplay
 								datetime: item.date
-						p {className: 'post-list__preview'},
-							item.preview

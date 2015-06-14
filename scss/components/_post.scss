@@ -11,12 +11,6 @@
 	img {
 		width: 100%;
 	}
-
-	> * {
-		@include media-query('palm') {
-			@include font-size(16px);
-		}
-	}
 }
 .header-image {
 	width: 100%;
