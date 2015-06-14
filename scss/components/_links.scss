@@ -1,9 +1,10 @@
 a {
 
-	color: darken($action-color, 30%);
-	// text-decoration: none;
+	color: $link-color;
+	text-decoration: none;
 	&:hover {
-		color: darken($action-color, 20%);
+		text-decoration: underline;
+		color: $link-color;
 	}
 	&,
 	&:focus,

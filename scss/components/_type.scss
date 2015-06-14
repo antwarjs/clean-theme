@@ -143,6 +143,7 @@ blockquote {
 time {
 	font-family: $small-font;
 	color: $quiet-font-color;
+	font-weight: $bold;
 	@include font-size($deci-size);
 }
 

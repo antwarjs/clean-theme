@@ -8,7 +8,7 @@ $red: 												#EC5334!default;
 $blue: 												#5DD9F2!default;
 $purple: 											#81426E!default;
 $dark: 												#434343!default;
-$light: 											#FCFCF5!default;
+$light: 											#FCFCFc!default;
 
 // UI colors
 $font-color: 												#222!default;
@@ -55,10 +55,14 @@ $light-tint:												97%!default;
 
 // UI element colors
 
-$action-color:											#9C9C9C!default;
+$action-color:											$red!default;
 $action-color-light:								lighten($action-color, 10%)!default;
 $action-color-dark:									darken($action-color, 10%)!default;
 
+$sidebar-color:											darken($light, 100 - $tint);
+$sidebar-font-color:								$dark;
+
+$link-color: darken($action-color, 20%);
 
 // Borders
 $border-color:											mix($background-color, $font-color, 85%)!default;
@@ -75,6 +79,7 @@ $heavy-border:											$border-width $heavy-border-color solid!default;
 // Widths
 $max-width:													710px!default;
 $top-padding:												1px!default; /* Where does the horizontal grid start? */
+$sidebar-width:											$base-spacing-unit * 8;
 
 // Transitions
 $transition-speed:									.3s!default;
