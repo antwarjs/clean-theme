@@ -24,7 +24,6 @@ module.exports = {
   },
   build: function(plugins) {
     var ExtractTextPlugin = plugins.ExtractTextPlugin;
-
     return {
       module: {
         loaders: [
