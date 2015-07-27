@@ -2,8 +2,10 @@
 	align-self: center;
 	max-width: $max-width;
 	padding: 0 $base-spacing-unit;
+	margin-top: $base-spacing-unit * 2;
 	margin-bottom: $base-spacing-unit * 3;
 	@include media-query('palm') {
+		margin-top: 0;
 		padding: 0 $half-spacing-unit;
 	}
 }
@@ -15,6 +17,13 @@
 .header-image {
 	width: 100%;
 	margin-top: $base-spacing-unit * 3;
+	padding-top: 75%;
+	background-size: cover;
+	background-color: mix($sidebar-color, $background-color, 50%);
+	background-position: center center;
+	@include media-query('palm') {
+		margin-top: $base-spacing-unit * 2;
+	}
 }
 .post__author,
 .post__moment {

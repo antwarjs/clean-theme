@@ -1,6 +1,6 @@
-$body-font: 												"Hoefler Text", "Georgia", serif!default;
-$small-font: 												"Avenir Next", "Helvetica Neue", sans-serif!default;
-$code-font: 												"Input Sans Narrow","Source Code Pro", "Input Sans", "Inconsolata", monospace!default;
+$body-font: 												"Georgia", serif!default;
+$small-font: 												sans-serif!default;
+$code-font: 												monospace!default;
 $heading-font: 											$body-font!default;
 
 // Brand colors
@@ -15,7 +15,7 @@ $font-color: 												#222!default;
 $heading-color: 										#222!default;
 $quiet-font-color: 									#999!default;
 $background-color: 									#fff!default;
-$background-alt-color: 							#eee!default;
+$background-alt-color: 							#f6f6f6!default;
 
 // Font and spacing
 $base-font-size:										20px!default;
@@ -70,7 +70,7 @@ $border-color:											mix($background-color, $font-color, 85%)!default;
 $quiet-border-color:								mix($background-color, $font-color, $heavy-tint)!default;
 $heavy-border-color:								darken($border-color, 8%)!default;
 
-$border-width:											2px!default;
+$border-width:											1px!default;
 
 $border:														$border-width $border-color solid!default;
 $action-border:											$border-width $action-color solid!default;

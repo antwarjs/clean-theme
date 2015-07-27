@@ -40,26 +40,26 @@ h1 {
 	// letter-spacing: 1px;
 	// margin-top: $base-spacing-unit;
 	@include media-query('palm') {
-		@include font-size($h2-size);
+		@include font-size($h3-size);
 	}
 }
 h2 {
 	@include font-size($h2-size);
 	font-weight: $fat;
 	@include media-query('palm') {
-		@include font-size($h3-size);
+		@include font-size($h4-size);
 	}
 }
 h3 {
 	@include font-size($h3-size);
 	@include media-query('palm') {
-		@include font-size($h4-size);
+		@include font-size($h5-size);
 	}
 }
 h4 {
 	@include font-size($h4-size);
 	@include media-query('palm') {
-		@include font-size($h5-size);
+		@include font-size($h6-size);
 	}
 }
 h5 {
@@ -186,6 +186,6 @@ time {
 
 p, code, blockquote, pre {
 	@include media-query('palm') {
-		@include font-size(18px);
+		@include font-size(16px);
 	}
 }

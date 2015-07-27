@@ -12,32 +12,37 @@ $line-height: 3px;
 .nav {
 	flex-direction: row;
 	justify-content: center;
-	background-color: $sidebar-color;
+	background-color: $background-color;
+	border-bottom: $quiet-border;
 	z-index: 5;
 	width: 100%;
-	padding: $half-spacing-unit 0;
-	transform: translateY(-100%);
-	opacity: 0;
-	transition: all $transition-easing $transition-speed;
+	// padding: $half-spacing-unit 0;
 	pointer-events: all;
 	@include layer;
-	.nav__toggle:checked ~ & {
-		opacity: 1;
-		transform: translateY(0);
+	@include media-query(palm) {
+		transform: translateY(-100%);
+		opacity: 0;
+		transition: all $transition-easing $transition-speed;
+		text-align: center;
+		width: 100%;
+		.nav__toggle:checked ~ & {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 }
 
 .nav__link,
 .nav__link a,
 .nav__toggle-label {
-	// font-family: $small-font;
-	font-weight: $fat;
+	font-family: $small-font;
+	font-size: $deci-size;
 	pointer-events: all;
 	color: $link-color;
 }
 .nav__link {
 	display: inline-block;
-	padding: $half-spacing-unit $base-spacing-unit;
+	padding: $half-spacing-unit;
 	transition: color $transition-easing $transition-speed;
 	// @include font-size($deci-size);
 	&:hover {
@@ -51,36 +56,40 @@ $line-height: 3px;
 .nav__toggle {
 	display: none;
 }
+
+$line-spacing: floor($half-spacing-unit * 1.5 - 1);
+
 .nav__toggle-label {
-	// display: block;
-	width: $base-spacing-unit * 2;
-	height: $base-spacing-unit * 2;
+	display: none;
+	width: $base-spacing-unit * 1.5;
+	height: $base-spacing-unit * 1.5;
 	border-radius: 50%;
 	text-align: center;
-
 	padding: $half-spacing-unit 0;
 	position: absolute;
-	top: $half-spacing-unit;
-	right: $half-spacing-unit;
+	top: $half-spacing-unit / 2;
+	left: $half-spacing-unit / 2;
 	z-index: 100;
-	@include media-query($max-width) {
-		background-color: $sidebar-color;
+	background-color: $background-color;
+	border: $quiet-border;
+	@include media-query(palm) {
+		display: block;
 	}
 	&:before {
-		top: $base-spacing-unit - $line-height * 2;
+		top: $line-spacing - $line-height * 2;
 	}
 	&:after {
-		top: $base-spacing-unit + $line-height * 2;
+		top: $line-spacing + $line-height * 2;
 	}
 	&:before,
 	&:after {
 		content: '';
-		width: $base-spacing-unit;
+		width: $line-spacing;
 		height: $line-height;
 		background-color: $link-color;
 		border-radius: $line-height;
 		position: absolute;
-		left: calc(50% - #{$half-spacing-unit});
+		left: calc(50% - #{floor($half-spacing-unit * 1.5 / 2)});
 		transform-origin: 50% 50%;
 		transition: transform $transition-speed $transition-easing 0s,
 				top $transition-speed $transition-easing $transition-speed ;
@@ -92,10 +101,10 @@ $line-height: 3px;
 	}
 		.nav__toggle:checked ~ &:after {
 			transform: rotate(-45deg);
-			top: $base-spacing-unit;
+			top: $line-spacing;
 		}
 		.nav__toggle:checked ~ &:before {
 			transform: rotate(45deg);
-			top: $base-spacing-unit;
+			top: $line-spacing;
 		}
 }
