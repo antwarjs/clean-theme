@@ -1,6 +1,6 @@
 {
   "name": "antwar-clean-theme",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Clean theme for antwar",
   "main": "index.js",
   "scripts": {
