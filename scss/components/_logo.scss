@@ -1,0 +1,14 @@
+.logo {
+	> svg {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.logo--page {
+	position: fixed;
+	bottom: $half-spacing-unit;
+	left: $half-spacing-unit;
+	width: $base-spacing-unit * 1.5;
+	height: $base-spacing-unit * 1.5;
+}

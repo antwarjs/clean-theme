@@ -3,7 +3,6 @@ PathsMixin = require 'antwar-core/PathsMixin'
 NavigationLink = React.createFactory require 'antwar-core/NavigationLink'
 _ = require 'lodash'
 Config = require 'config'
-
 { nav, div, a, input, label } = require 'react-coffee-elements'
 
 module.exports = React.createClass
