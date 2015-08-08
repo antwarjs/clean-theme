@@ -85,8 +85,10 @@ pre, code {
 }
 pre {
 	margin-bottom: $base-spacing-unit;
+	overflow-y: auto;
 }
 pre > code {
+	display: block;
 	padding: 0;
 }
 

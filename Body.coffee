@@ -5,7 +5,7 @@ Router = require 'react-router'
 
 require './scss/main.scss'
 
-{ div, main, script, link } = require 'react-coffee-elements'
+{ div, main, script, link, a } = require 'react-coffee-elements'
 
 config = require 'config'
 if config.theme.customStyles?
@@ -23,7 +23,7 @@ module.exports = React.createClass
 				[
 					Nav(key: 'nav')
 					if typeof config.theme.logo is 'function'
-						div key: 'logo', className: 'logo logo--page', dangerouslySetInnerHTML: __html: config.theme.logo()
+						a href: '/', key: 'logo', className: 'logo logo--page', dangerouslySetInnerHTML: __html: config.theme.logo()
 				]
 			main { role: 'main' },
 				@props.children
