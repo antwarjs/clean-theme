@@ -70,7 +70,7 @@ $line-spacing: floor($half-spacing-unit * 1.5 - 1);
 	top: $half-spacing-unit / 2;
 	left: $half-spacing-unit / 2;
 	z-index: 100;
-	background-color: $background-color;
+	background-color: rgba($background-color, 0.85);
 	border: $quiet-border;
 	@include media-query(palm) {
 		display: block;
@@ -113,6 +113,5 @@ $line-spacing: floor($half-spacing-unit * 1.5 - 1);
 		background-color: rgba($background-color, 0.65);
 		backdrop-filter: blur(5px);
 		-webkit-backdrop-filter: blur(4px);
-
   }
 }

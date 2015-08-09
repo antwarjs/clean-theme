@@ -66,9 +66,9 @@ $link-color: $action-color;
 $link-color-active: lighten($action-color, 20%);
 
 // Borders
-$border-color:											mix($background-color, $font-color, 85%)!default;
-$quiet-border-color:								mix($background-color, $font-color, $heavy-tint)!default;
-$heavy-border-color:								darken($border-color, 8%)!default;
+$border-color:											rgba(#000, 0.2)!default;
+$quiet-border-color:								rgba(#000, 0.1)!default;
+$heavy-border-color:								rgba(#000, 0.3)!default;
 
 $border-width:											1px!default;
 

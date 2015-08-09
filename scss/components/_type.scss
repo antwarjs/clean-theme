@@ -189,5 +189,6 @@ time {
 p, code, blockquote, pre, li {
 	@include media-query('palm') {
 		@include font-size(16px);
+		line-height: 1.5;
 	}
 }
